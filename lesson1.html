@@ -44,6 +44,10 @@
         <!-- Zdarzenia Elementarne i Eksperyment -->
         <section class="slide">
             <h2>Eksperyment i Zdarzenia Elementarne</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Losowy Wynik Eksperymentu</div>
+                <div class="anim-random-box"></div>
+            </div>
             <p>W nauce, w celu oceny zjawiska wykonuje się kontrolowane <strong>doświadczenie losowe</strong> (eksperyment). Wynik takiego doświadczenia nazywamy <strong>zdarzeniem elementarnym (ω)</strong>.</p>
             <p>Eksperyment można powtarzać nieskończenie wiele razy, ale w przypadku braku determinizmu, nigdy nie jesteśmy w 100% pewni, co się wydarzy.</p>
             <p><strong>Zdarzenia niezależne:</strong> wystąpienie jednego zdarzenia nie wpływa w żaden sposób na prawdopodobieństwo wystąpienia drugiego.</p>
@@ -60,6 +64,14 @@
         <!-- Zmienna Losowa -->
         <section class="slide">
             <h2>Zmienna Losowa (X)</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Mapowanie Zdarzenia na Liczbę</div>
+                <div class="anim-mapping-container">
+                    <div class="anim-object">📦</div>
+                    <div class="anim-arrow">➜</div>
+                    <div class="anim-number">12</div>
+                </div>
+            </div>
             <p>To nic innego jak funkcja, która konkretnemu zdarzeniu w świecie przypisuje liczbę. Przekształcamy to, co się stało (zdarzenie), w to, co możemy mierzyć (matematykę).</p>
             <div class="formula">
                 \( X = X(\omega), \quad \omega \in \Omega, \quad X \in \mathbb{R} \)
@@ -76,6 +88,15 @@
         <!-- Zmierne Losowe Skokowe i Ciałe -->
         <section class="slide">
             <h2>Zmienna Dyskretna (Skokowa) i Ciągła</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Skoki vs Ciągłość</div>
+                <div class="anim-d-vs-c">
+                    <div class="anim-discrete-track">
+                        <div class="anim-dot"></div><div class="anim-dot"></div><div class="anim-dot"></div><div class="anim-dot"></div>
+                    </div>
+                    <div class="anim-c-track"><div class="anim-c-fill"></div></div>
+                </div>
+            </div>
             <ul>
                 <li><strong>Zmienna dyskretna (skokowa):</strong> przyjmuje konkretne, oddzielne wartości (zazwyczaj całkowite). Możemy je po prostu "policzyć" na palcach (nawet jeśli ich liczba jest nieskończona, da się je kolejno ponumerować).</li>
                 <li><strong>Zmienna ciągła:</strong> może przyjąć DOWOLNĄ wartość z pewnego przedziału liczbowego. Najczęściej ma nieskończenie wiele ułamków po przecinku (zależy od precyzji pomiaru).</li>
@@ -92,6 +113,20 @@
         <!-- Prawdopodobienstwo i Dystrybuanta -->
         <section class="slide">
             <h2>Dystrybuanta (F(x))</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Skumulowane Prawdopodobieństwo</div>
+                <div class="anim-cdf-chart">
+                    <div class="anim-cdf-line">
+                        <div class="anim-cdf-step s1"></div>
+                        <div class="anim-cdf-vert v1" style="--h: 30px"></div>
+                        <div class="anim-cdf-step s2"></div>
+                        <div class="anim-cdf-vert v2" style="--h: 30px"></div>
+                        <div class="anim-cdf-step s3"></div>
+                        <div class="anim-cdf-vert v3" style="--h: 30px"></div>
+                        <div class="anim-cdf-step s4"></div>
+                    </div>
+                </div>
+            </div>
             <p><strong>Dystrybuanta</strong> zmiennej losowej \(X\) mówi nam o tym, jakie jest prawdopodobieństwo tego, że nasza zmienna losowa nie przekroczy określonej wartości \(x\).</p>
             <div class="formula">
                 \( F(x) = P(X \leq x) \)
@@ -113,6 +148,16 @@
         <!-- Charakterystyki - Wartosc oczekiwana -->
         <section class="slide">
             <h2>Charakterystyki Rozkładu: Wartość Oczekiwana (E(X))</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Wielokrotny Balans (Średnia)</div>
+                <div class="anim-balance-container">
+                    <div class="anim-balance-beam">
+                        <div class="anim-weight-left"></div>
+                        <div class="anim-weight-right"></div>
+                    </div>
+                    <div class="anim-balance-pivot"></div>
+                </div>
+            </div>
             <p>Wartość oczekiwana, oznaczana \(E(X)\) lub \(\mu\) (mi), to teoretyczna "średnia", w kierunku której zmierzają wyniki w nieskończenie dużej liczbie eksperymentów. Oznacza co się stanie "przeciętnie".</p>
             <div class="formula">
                 \( E(X) = \sum x_i \cdot p_i \) (dla zmiennej dyskretnej)
@@ -129,6 +174,16 @@
         <!-- Wariancja -->
         <section class="slide">
             <h2>Charakterystyki Rozkładu: Wariancja i Odchylenie Standardowe</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Rozproszenie danych</div>
+                <div class="anim-variance-container">
+                    <div class="anim-var-dot" style="--tx: -50px; --ty: -30px; animation-delay: 0.1s;"></div>
+                    <div class="anim-var-dot" style="--tx: 40px; --ty: -20px; animation-delay: 0.2s;"></div>
+                    <div class="anim-var-dot" style="--tx: -20px; --ty: 40px; animation-delay: 0.3s;"></div>
+                    <div class="anim-var-dot" style="--tx: 30px; --ty: 30px; animation-delay: 0.4s;"></div>
+                    <div class="anim-var-dot" style="--tx: 0; --ty: -50px; animation-delay: 0.5s;"></div>
+                </div>
+            </div>
             <p><strong>Wariancja</strong>, oznaczana jako \(D^2(X)\), \(\sigma^2\) (sigma kwadrat) bądź \(Var(X)\), to miara rozproszenia. Mówi o tym, jak bardzo wyniki odchylają się od wyliczonej średniej (wartości oczekiwanej).</p>
             <div class="formula">
                 \( D^2(X) = E(X^2) - (E(X))^2 \)
@@ -150,6 +205,14 @@
         <!-- Cechy -->
         <section class="slide">
             <h2>Rodzaje badanych Cech (Zmiennych)</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Kategoryzacja</div>
+                <div class="anim-sort-container">
+                    <div class="anim-item-sort">🏷️</div>
+                    <div class="anim-box">A</div>
+                    <div class="anim-box">B</div>
+                </div>
+            </div>
             <ul>
                 <li><strong>Cechy mierzalne (ilościowe)</strong>: Można je wyrazić jednostką miary (np. metry, sekundy, liczba sztuk).
                     <ul>

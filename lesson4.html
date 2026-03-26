@@ -43,7 +43,14 @@
     <main class="lesson-content">
         <!-- Procedura bazy -->
         <section class="slide">
-            <h2>Wprowadzenie do Wnioskowania</span></h2>
+            <h2>Wprowadzenie do Wnioskowania</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Bój dwóch Hipotez</div>
+                <div class="anim-hypo-container" style="justify-content: center;">
+                    <div class="anim-curve h0" style="position: relative; left: 0;"></div>
+                    <div class="anim-curve h1" style="position: relative; left: -20px;"></div>
+                </div>
+            </div>
             <p><strong>Hipoteza statystyczna</strong> to nasze pewne przypuszczenie na temat świata, dotyczące parametru populacji. Oceniamy jej wiarygodność na podstawie małego wycinka wiedzy - próbie z testów.</p>
             <p>Formułujemy dwie konkurencyjne ze sobą wersje rzeczywistości:</p>
             <ul>
@@ -55,6 +62,14 @@
         <!-- Błędy w statystyce -->
         <section class="slide">
             <h2>Pomyłki Natury - Błąd I i II rodzaju</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Poziomy błędów</div>
+                <div class="anim-hypo-container">
+                    <div class="anim-curve h0"></div>
+                    <div class="anim-curve h1"></div>
+                    <div class="anim-cut-line"></div>
+                </div>
+            </div>
             <p>Nie jesteśmy bogami – nasza decyzja z pobranych fragmentów o świecie może okazać się zwyczajnie, po ludzku zła, gdy przyrównamy ją do Stanu Natury.</p>
             <ul>
                 <li><strong>Błąd I rodzaju (Błąd odrzucenia) - Prawdopodobieństwo \(\alpha\)</strong>: Pomyłka oznaczająca odrzucenie i wyrzucenie do śmieci \(H_0\) mimo, że na świecie naprawdę, cichaczem byłą ona PRAWDZIWA. Prawdopodobieństwo ustrzeżenia się od tego błędu leży w samym wybranym przez nas poziomie istotności testu (często to \(0.05\) więc pomyłka to max 5%).</li>
@@ -74,6 +89,14 @@
         <!-- Procedura -->
         <section class="slide">
             <h2>Logika Krok po Kroku</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Przeprowadzanie Testu</div>
+                <div class="anim-confidence-container" style="border-bottom: none">
+                    <div class="anim-interval-bar" style="background:#e2e8f0; width: 60%; left: 20%; animation: none; border: 2px dashed var(--text-muted); height: 40px; top:0;"></div>
+                    <div class="anim-var-dot" style="animation: none; top:15px; left: 25%; background: var(--accent);"></div>
+                    <div class="anim-var-dot" style="animation: none; top:15px; left: 85%; background: var(--primary);"></div>
+                </div>
+            </div>
             <ol>
                 <li>Formułujemy na kartce \(H_0\), a następnie pod nią wpisujemy \(H_1\) (jednostronną albo dwustronną) - i wybieramy poziom morderczej istotności dla błędów (\(\alpha\) = 5%).</li>
                 <li>Wyliczamy Statystykę Testową. Dla odchyleń to \(\chi^2\). A ogólnie dla średnich, gdy próba mała lub bez znajomości Sigmy populacji (\(\sigma\)) to <strong>Rozkłady t-Studenta \(t_0 = \frac{\overline{X} - \mu_0}{s} \cdot \sqrt{n}\)</strong> lub dla dużych prób (nad 30) <strong>Standaryzowane Normalne (\(z_0\))</strong>.</li>
@@ -86,6 +109,14 @@
         <!-- Szybki test m -->
         <section class="slide">
             <h2>Przykład z IT i Wyrokiem Hipotezy</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Odrzucenie Hipotezy Zero</div>
+                <div class="anim-hypo-container">
+                    <div class="anim-curve h0" style="left: 140px; opacity: 0.1"></div>
+                    <div class="anim-cut-line" style="left: 100px;"></div>
+                    <div class="anim-var-dot" style="left: 40px; top: 60px; animation: none;"></div>
+                </div>
+            </div>
             <p>Przypuśćmy: W starej dokumentacji serwera pisze, że wysyła pakiety do chmury średnio w czasie \(\mu_0=12.5\mu s\). Sprawdzasz sam – pobrałeś ping serwera ok.~\(n=50\) razy na wirtualnym hoście. Wyszła tam lekko szybsza paczka uśrednień \(\overline{X} = 12.3 \mu s\) bez zmian w gęstości odchyłu (\(s=0.5\)). Masz twarde dowody żeby twierdzić, że dokumentacja oficjalnie okłamuje świat?</p>
             <br>
             <p>1. \(\alpha=0.05\). </p>
@@ -98,6 +129,13 @@
         <!-- Relacja z Przedzialami -->
         <section class="slide">
             <h2>Korelacja z Przedziałem Ufności (Secret Trick)</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Jedność teorii</div>
+                <div class="anim-confidence-container">
+                    <div class="anim-mean-marker" style="height: 10px;"></div>
+                    <div class="anim-interval-bar" style="width: 50%; left: 25%;"></div>
+                </div>
+            </div>
             <p>Istnieje niezwykła zależność. Zbiór, w którym akceptujesz i zatrzymujesz hipotezę zerową z pomiarami (to czego nie zakreślił ołówek z zewnątrz obszaru Krytycznego K) ... Odpowiada matematycznie i fizycznie wzorowi na <strong>Przedział Ufności ze 100(1-\(\alpha\))%! </strong>. Te działy są swoją wielką podkategorią.</p>
         </section>
 

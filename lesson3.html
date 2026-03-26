@@ -44,6 +44,12 @@
         <!-- Skośność i Kurtoza -->
         <section class="slide">
             <h2>Testy momentów z próby: Skośność i Kurtoza</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Skośność (Asymetria)</div>
+                <div class="anim-hypo-container">
+                    <div class="anim-curve h0" style="left: 65px; background: var(--primary); border-radius: 100px 20px 0 0;"></div>
+                </div>
+            </div>
             <p>Zanim przetestujemy "ogólną normalność", sprawdzamy po prostu jak nasza krzywa bardzo poszła "w bok" od rozkładu symetrycznego <strong>(skośność, \(\gamma_1\))</strong> i jak bardzo jest wypiętrzona w góre/spłaszczona na boki <strong>(kurtoza \(\gamma_2\))</strong>.</p>
             <ul>
                 <li>\(H_0: \gamma_1 = 0\) : zakładamy domyślnie, że nasz rozkład jest symetryczny (nie ma skosu asymetrii w żadną dzwonowatą stronę).</li>
@@ -55,6 +61,15 @@
         <!-- Test Kolmogorowa Smirnowa -->
         <section class="slide">
             <h2>Testy Rozkładu Empirycznego (Porównywanie Prawdopodobieństw)</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Różnica Empiryczna</div>
+                <div class="anim-cdf-chart" style="width: 40%;">
+                    <div class="anim-cdf-line">
+                        <div class="anim-cdf-step s1" style="width: 50%; bottom: 20px;"></div>
+                        <div class="anim-cdf-step s1" style="width: 50%; bottom: 30px; background: var(--accent);"></div>
+                    </div>
+                </div>
+            </div>
             <p>Wszystko oparte jest o prosty warunek: Jeśli mam próbę, buduję tak zwaną "Dystrybuantę empiryczną". Porównuję ją z ułożoną na stole idealną książkową "Dystrybuantą matematyczną rozkładu normalnego". Patrzę <strong>jak mocno</strong> różnią się od siebie te dwa wykresy na y-ach.</p>
             <div class="formula">
                 \( H_0: F_n(Z) = F(Z) \) (Hipoteza Zerowa: moje doświadczenie empiryczne jest identyczne w szansach jak normalny wykres matematyki hipotetycznej)
@@ -69,6 +84,13 @@
         
         <section class="slide">
             <h2>Test Kołmogorowa-Smirnowa i Lillieforsa</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Dopasowanie z poprawką</div>
+                <div class="anim-hypo-container" style="justify-content: center;">
+                    <div class="anim-curve h0" style="left: auto; width: 100px; height: 60px;"></div>
+                    <div class="anim-curve h0" style="left: auto; width: 120px; height: 80px; background: none; border: 2px dashed var(--accent);"></div>
+                </div>
+            </div>
             <ul>
                 <li><strong>Gdy ZNASZ od zawsze</strong> dokładne odchylenie populacji i średnią prawdziwą = Używasz testu <strong>Kołmogorowa-Smirnowa.</strong> Skupia się on wzięciu do kupy maksymalnej BEZWZGLĘDNEJ różnicy \(D\) dwóch dystrybuant w każdym calu.</li>
                 <li><strong>Gdy NIE znasz</strong> parametrów (a zgadnij z czym masz do czynienia w życiu - nigdy ich nie znasz!) = używamy specjalnych poprawek <strong>Lillieforsa</strong> na to wymierne uśrednienie.</li>
@@ -78,6 +100,14 @@
         <!-- Chi kwadrat zgodności -->
         <section class="slide">
             <h2>Zgodność chi-kwadrat (\(\chi^2\)) Pearsona</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Oczekiwane vs Obserwowane</div>
+                <div class="anim-chi-container">
+                    <div class="anim-chi-sub"><div class="anim-chi-bar anim-chi-obs"></div><div class="anim-chi-bar anim-chi-exp"></div></div>
+                    <div class="anim-chi-sub"><div class="anim-chi-bar anim-chi-obs" style="animation-delay: 0.2s"></div><div class="anim-chi-bar anim-chi-exp" style="height: 60px;"></div></div>
+                    <div class="anim-chi-sub"><div class="anim-chi-bar anim-chi-obs" style="animation-delay: 0.4s"></div><div class="anim-chi-bar anim-chi-exp" style="height: 30px;"></div></div>
+                </div>
+            </div>
             <p>Możesz ten test stosować do badaniu WSZYSTKIEGO. Jest uniwersalny i działa genialnie z każdym rozkładem hipotetycznym (nie musi być normalny, może być wykładniczy). Mamy wymóg dużych danych i "przedziałów klasowych" ze swobodą badawczą.</p>
             <div class="formula">
                 \( \chi^2 = \sum \limits_{i=1}^k \frac{(n_i - np_i)^2}{np_i} \)
@@ -88,6 +118,15 @@
         <!-- Shapiro Wilk i QQ -->
         <section class="slide">
             <h2>Testy uwiązania korelacji - Niezawodny "Shapiro-Wilk"</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Q-Q Plot</div>
+                <div class="anim-qq-container">
+                    <div class="anim-qq-line"></div>
+                    <div class="anim-qq-dot" style="--tx: 20px; --ty: -35px; --ox: 20px; --oy: -20px;"></div>
+                    <div class="anim-qq-dot" style="--tx: 50px; --ty: -65px; --ox: 40px; --oy: -65px; animation-delay: 0.5s;"></div>
+                    <div class="anim-qq-dot" style="--tx: 80px; --ty: -95px; --ox: 80px; --oy: -80px; animation-delay: 1s;"></div>
+                </div>
+            </div>
             <p>Ten test traktuje nasze dane jak krzywą i bada prostą korelację liniową. W teście korelacyjnym nie do końca "rozumie", jakie są przyczyny błędu – za to odsyła nam wskaźnik czy wykazujemy korelacyjność. Krótko – jest najskuteczniejszy dla małych prób (\(n\)) mniejszych niż 50 i cechuje się największą ogólną mocą ze wszystkich wymienionych. Do niego doprowadza się graficzną analizę tzw. <strong>Wykresu Q-Q (Qwantyl-Qwantyl).</strong></p>
             
             <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>

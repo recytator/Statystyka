@@ -44,6 +44,13 @@
         <!-- Wstep do Estymacji -->
         <section class="slide">
             <h2>Po co nam w ogóle estymacja przedziałowa?</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Od punktu do przedziału</div>
+                <div class="anim-confidence-container">
+                    <div class="anim-mean-marker"></div>
+                    <div class="anim-interval-bar"></div>
+                </div>
+            </div>
             <p>Za pomocą estymatorów punktowych (czyli konkretnej jednej liczby, np. "średni czas to 50s") nie można określić precyzji ani pewności. Nie wiemy, czy naprawdę wszyscy mają 50s, czy to po prostu zbieg okoliczności w naszej małej grupie testowej.</p>
             <p><strong>Przedział ufności</strong> rozwiązuje ten problem. Zamiast jednej liczby, podajemy "od-do" z pewnym założonym z góry poziomem prawdopodobieństwa, np. ufać w 95%.</p>
             <p>Koncepcję tę opracował w 1933 roku polski statystyk J. Spława-Neyman.</p>
@@ -60,6 +67,13 @@
         <!-- Dlugosc a ufnosc -->
         <section class="slide">
             <h2>Precyzja Estymacji vs Ufność</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Szerokość a ufność</div>
+                <div class="anim-confidence-container" style="border: none;">
+                    <div class="anim-mean-marker"></div>
+                    <div class="anim-interval-bar" style="animation-duration: 2s;"></div>
+                </div>
+            </div>
             <ul>
                 <li><strong>Długość przedziału:</strong> świadczy o precyzji (im krótszy "od-do", tym węższe widełki, więc precyzja jest większa).</li>
                 <li><strong>Poziom ufności (\(1 - \alpha\)):</strong> oznaczany np. jako 95%, 99%. Mówi nam z jaką "pewnością" wnioskujemy. Poziom ufności 95% oznacza, że gdybyśmy powtarzali wyciąganie prób 100 razy i z powrotem liczyli takie przedziały - 95 z nich by faktycznie "trafiło" w to prawdziwe, nieznane odchylenie populacji.</li>
@@ -71,6 +85,14 @@
         <!-- Przedział ufności dla średniej -->
         <section class="slide">
             <h2>Przedział Ufności dla Średniej \(\mu\), \(\sigma\) nieznana</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Przedział t-Studenta</div>
+                <div class="anim-hypo-container">
+                    <div class="anim-curve h0" style="left: 65px; background: var(--primary);"></div>
+                    <div class="anim-cut-line" style="left: 80px; height: 50px;"></div>
+                    <div class="anim-cut-line" style="left: 170px; height: 50px;"></div>
+                </div>
+            </div>
             <p>Jest to najczęsty przypadek w życiu. Znasz średnią (\(\overline{X}\)) i standardowe odchylenie na wybranej próbie (\(s\)), ale dla reszty świata – jest Ci kompletnie nieznana (\(\sigma\)).</p>
             <div class="formula">
                 \( P \left( \overline{X} - t_{n-1, \alpha/2} \cdot \frac{s}{\sqrt{n}} \leq \mu \leq \overline{X} + t_{n-1, \alpha/2} \cdot \frac{s}{\sqrt{n}} \right) = 1 - \alpha \)
@@ -91,6 +113,14 @@
         <!-- Przedział ufności dla wariancji -->
         <section class="slide">
             <h2>Przedział wyznaczany z \(\chi^2\) dla Wariancji \(\sigma^2\)</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Asymetria Chi-Kwadrat</div>
+                 <div class="anim-chi-container">
+                    <div class="anim-chi-sub"><div class="anim-chi-bar anim-chi-obs"></div></div>
+                    <div class="anim-chi-sub"><div class="anim-chi-bar anim-chi-obs" style="animation-delay: 0.2s"></div></div>
+                    <div class="anim-chi-sub"><div class="anim-chi-bar anim-chi-obs" style="animation-delay: 0.4s"></div></div>
+                </div>
+            </div>
             <p>Bazuje on w stu procentach na skomplikowanie brzmiącym rozkładzie <strong>Chi-kwadrat (\(\chi^2\))</strong>.</p>
             <div class="formula">
                 \( P \left( \frac{(n-1)s^2}{\chi^2_{n-1, \alpha/2}} \leq \sigma^2 \leq \frac{(n-1)s^2}{\chi^2_{n-1, 1-\alpha/2}} \right) = 1 - \alpha \)
@@ -101,6 +131,14 @@
         <!-- Przedzial ufności dla wskaźnika struktury -->
         <section class="slide">
             <h2>Przedział ufności dla wskaźnika struktury (proporcji, frakcji) \(p\)</h2>
+            <div class="concept-animation">
+                <div class="anim-title">Proporcja Sukcesów</div>
+                 <div class="anim-d-vs-c" style="flex-direction: row; justify-content: center; gap: 5px;">
+                    <div class="anim-dot" style="opacity:1; animation: none;"></div>
+                    <div class="anim-dot" style="opacity:1; animation: none;"></div>
+                    <div class="anim-dot" style="opacity:1; animation: none; background: var(--text-muted);"></div>
+                </div>
+            </div>
             <p>Pozwala oszacować ułamek "Części Całości". Przyjmujemy tzw. p-daszek: \(\hat{p}\), która wynosi \(\frac{m}{n}\) gdzie \(m\) to sukcesy wewnątrz naszej zbadanej próbki \(n\).</p>
             <div class="formula">
                 \( P \left( \hat{p} - z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}\hat{q}}{n}} < p < \hat{p} + z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}\hat{q}}{n}} \right) = 1 - \alpha \)
