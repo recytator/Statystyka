@@ -1,0 +1,517 @@
+--- SLIDE 1 ---
+Estymacja przedziałowa
+Statystyka
+Estymacja przedziałowa
+prof. UPP dr hab. Bogna Zawieja
+Katedra Metod Matematycznych i Statystycznych
+Uniwersytet Przyrodniczy w Poznaniu
+17 marca 2026
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+1 / 20
+
+
+--- SLIDE 2 ---
+Estymacja przedziałowa
+Estymacja przedziałowa
+Za pomocą estymatorów punktowych, nawet o bardzo wy-
+rafinowanych własnościach, nie można określić precyzji i
+wiarygodności uzyskanych ocen.
+Posługując się estymacją przedziałową można usunąć te
+niedogodności:
+Przedział ufności:
+w oparciu o próbę ustalamy dwie granice, pomiędzy
+którymi powinien znajdować się poszukiwany parametr.
+Granice te określają przedział losowy charakteryzujący się
+dwoma parametrami: długością i ufnością.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+2 / 20
+
+
+--- SLIDE 3 ---
+Estymacja przedziałowa
+Estymacja przedziałowa
+Długość świadczy o precyzji estymacji a ufność o wiaro-
+godności.
+Im krótszy jest przedział, tym precyzja estymacji jest więk-
+sza. Natomiast im większa ufność tym wyższa jest wiaro-
+godność wnioskowania.
+Koncepcję tę opracował w 1933 roku polski statystyk
+J. Spława-Neyman.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+3 / 20
+
+
+--- SLIDE 4 ---
+Estymacja przedziałowa
+Estymacja przedziałowa
+Przedział ufności
+Niech (1 −α) będzie określonym ”dużym” prawdo-
+podobieństwem i niech statystyki (zmienne losowe)
+L oraz U będą funkcjami zmiennych losowych
+X1, X2, . . . , Xn takimi, że
+P(L < θ < U) = 1 −α
+Wówczas przedział losowy ⟨L, U⟩nazywamy
+(1 −α) · 100% przedziałem ufności dla parametru θ,
+wartość (1 −α) nazywamy współczynnikiem ufności
+przedziału,
+α nazywamy poziomem istotności
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+4 / 20
+
+
+--- SLIDE 5 ---
+Estymacja przedziałowa
+Estymacja przedziałowa
+Poziom ufności oznacza, że na 100 przedziałów uzyska-
+nych na podstawie stu prób losowych możemy spodziewać
+się (1 −α) · 100% takich, w których będzie zawierać się
+prawdziwa wartość parametru θ.
+Przy zwiększaniu poziomu ufności, jednocześnie zwiększa
+się długość przedziału, maleje więc precyzja estymacji.
+Przy zwiększaniu liczebności próby, maleje długość prze-
+działu - wzrasta precyzja estymacji.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+5 / 20
+
+
+--- SLIDE 6 ---
+Estymacja przedziałowa
+Estymacja przedziałowa
+Przedział ufności dla parametr θ można zapisać:
+1. θ ∈(L, U) z prawdopodobieństwem 1 −α,
+2. P(L < θ < U) = 1 −α
+3. P(θ ∈(L; U)) = 1 −α
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+6 / 20
+
+
+--- SLIDE 7 ---
+Estymacja przedziałowa
+Przedział ufności dla średniej µ, N(µ, σ)
+Założenie:
+populacja normalna z nieznaną σ
+Zmienna losowa
+¯
+X−µ
+s
+√n ma rozkład t-Studenta o n −1 stopniach
+swobody.
+Szukamy takej wartości t by P(
+
+¯
+X−µ
+s
+√n
+ < t) = 1 −α.
+Mamy P(−t <
+¯
+X−µ
+s
+√n < t) = 1−α, wartość t odczytujemy z jedno-
+stronnych tablic rozkładu t-Studenta (RYSUNEK) na poziomie istot-
+ności α/2 przy n −1 stopniach swobody: P(t > tn−1,α/2) = α/2.
+Stąd 100 · (1 −α)% przedział ufności dla µ:
+P
+ 
+µ ∈
+
+X −tn−1,α/2 · s
+√n; X + tn−1,α/2 · s
+√n
+!
+= 1 −α
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+7 / 20
+
+
+--- SLIDE 8 ---
+Estymacja przedziałowa
+Przedział ufności dla średniej
+Założenie:
+próba duża (n ­ 30)
+100 · (1 −α)% przedział ufności dla µ:
+P
+
+µ ∈
+
+X −zα/2 · s
+√n; X + zα/2 · s
+√n
+
+= 1 −α
+gdzie zα/2 jest wartością krytyczną standaryzowanego roz-
+kładu normalnego, tzn. P(Z > zα/2) = α/2;
+Z ∼N(0, 1).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+8 / 20
+
+
+--- SLIDE 9 ---
+Estymacja przedziałowa
+Przykład 1. (Przedział ufności dla średniej)
+Wylosowano próbę 20-sto elementową, dla której
+zmierzono wartości pewnego parametru:
+16, 0, 0, 2, 3, 6, 8, 2, 5, 0, 12, 10, 5, 7, 2, 3, 8, 17, 9, 1
+Zakładając, że parametr ten ma rozkład normalny, oszacuj
+metodą przedziałową, z ufnością 0.95, przeciętną (średnią)
+wartość tego parametru.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+9 / 20
+
+
+--- SLIDE 10 ---
+Estymacja przedziałowa
+Przykład 1. (Przedział ufności dla średniej)
+σ – nieznane
+Przedział ufności:
+P
+
+
+µ ∈
+
+X −tn−1,α/2 · s
+√n, X + tn−1,α/2 · s
+√n
+
+
+
+= 1 −α
+X = 5.8 s = 5.085 n = 20 α = 0.05 t19,0.025 = 2.093
+Realizacja 95% przedziału ufności:
+( 3.42 , 8.18)
+P (µ ∈(3.42; 8.18)) = 1 −α
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+10 / 20
+
+
+--- SLIDE 11 ---
+Estymacja przedziałowa
+Przykład 2. (Przedział ufności dla średniej)
+Pobrano próbę 100 elementową z populacji normalnej i wyznaczono
+dla niej odchylenie standardowe s = 2. Jak dużą próbę należałoby
+pobrać, aby długość 95% przedziału ufności dla µ nie przekraczała
+0.01?
+Założenie: próba duża, 100(1 −α)% przedział ufności dla µ:
+P
+
+µ ∈
+
+X −zα/2 · s
+√n,
+X + zα/2 · s
+√n
+
+= 1 −α
+2 · z α
+2 · s
+√n ¬ 0.01
+s = 2 α = 0.05 z α
+2 = z0.025 = 1.96
+Odp.: n ­ 614656
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+11 / 20
+
+
+--- SLIDE 12 ---
+Estymacja przedziałowa
+Przedz. ufności dla wariancji σ2, N(µ, σ)
+Założenie:
+populacja normalna
+100(1 −α)% przedział ufności dla σ2:
+P
+
+
+(n −1)s2
+χ2
+n−1,α/2
+< σ2 < (n −1)s2
+χ2
+n−1,1−(α/2)
+
+
+= 1 −α
+gdzie χ2
+n−1,α/2 jest wartością krytyczną rozkładu chi-kwadrat,
+tzn. P(χ2 > χ2
+n−1,α/2) = α/2; χ2 ∼χ2
+n−1.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+12 / 20
+
+
+--- SLIDE 13 ---
+Estymacja przedziałowa
+Przedz. ufności dla odchyl. standardowego
+Założenie:
+próba duża
+100(1 −α)% przedział ufności dla σ:
+P
+
+
+
+s
+1 + zα/2
+√
+2n
+< σ <
+s
+1 −zα/2
+√
+2n
+
+
+= 1 −α
+gdzie zα/2 jest wartością krytyczną standaryzowanego roz-
+kładu normalnego, tzn. P(Z > zα/2) = α/2;
+Z ∼N(0, 1).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+13 / 20
+
+
+--- SLIDE 14 ---
+Estymacja przedziałowa
+Przykład 3.
+Badano czas oczekiwania na wzmocnienie i retransmisję sygnału ode-
+branego przez satelitę.
+Dla losowych 25 wiadomości otrzymano odchylenie standardowe cza-
+su oczekiwania 10.4 mikrosekund. Zakładając, że czas oczekiwania
+ma rozkład normalny, wyznacz 90% przedział ufności dla odchylenia
+standardowego czasu oczekiwania na wzmocnienie i retransmisję sy-
+gnału.
+100(1 −α)% przedział ufności dla σ2:
+P
+
+
+σ2 ∈
+
+
+(n −1)s2
+χ2
+n−1,α/2
+,
+(n −1)s2
+χ2
+n−1,1−(α/2)
+
+
+
+
+
+= 1 −α
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+14 / 20
+
+
+--- SLIDE 15 ---
+Estymacja przedziałowa
+Przykład 3.
+P
+
+
+σ2 ∈
+
+
+(n −1)s2
+χ2
+n−1,α/2
+,
+(n −1)s2
+χ2
+n−1,1−(α/2)
+
+
+
+
+
+= 1 −α
+n −1 = 24 s2 = (10.4)2 α = 0.1
+χ2
+24,0.05 = 36.415
+χ2
+24,0.95 = 13.848
+Przedział ufności dla wariancji: (71.28, 187.45)
+Przedział ufności dla odchylenia: (8.44, 13.69)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+15 / 20
+
+
+--- SLIDE 16 ---
+Estymacja przedziałowa
+Przedział ufności dla wskaźnika struktury
+(in. proporcji, frakcji)
+Założenie:
+próba duża (n ­ 100)
+Próba:
+m – liczba sukcesów, ˆp = m/n, ˆq = 1 −ˆp
+100(1 −α)% przedział ufności dla p:
+P
+
+
+ˆp −zα/2 ·
+v
+u
+u
+t ˆpˆq
+n < p < ˆp + zα/2 ·
+v
+u
+u
+t ˆpˆq
+n
+
+
+= 1 −α,
+gdzie zα/2 jest wartością krytyczną standaryzowanego roz-
+kładu normalnego, tzn. P(Z > zα/2) = α/2;
+Z ∼N(0, 1).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+16 / 20
+
+
+--- SLIDE 17 ---
+Estymacja przedziałowa
+Przykład 4. Przedział ufności dla wskaźnika struktury
+Z dziennika internetowego wylosowano 1000 wpisów. 650 z nich od-
+powiada plikom gif. Na podstawie tego badania oszacuj metodą prze-
+działową odsetek wszystkich plików gif. Przyjmij współczynnik ufno-
+ści 0.90. Następnie powtórz analizę przyjmując współczynnik ufności
+0.95. Porównaj i zinterpretuj otrzymane wyniki.
+P
+
+ˆp −zα/2 ·
+q
+ˆpˆq
+n < p < ˆp + zα/2 ·
+q
+ˆpˆq
+n
+
+= 1 −α,
+n = 1000, m = 650 ˆp = 650
+1000 = 0.65 ˆq = 0.35
+z0.05 = 1.645
+P(p ∈(0.625, 0.675)) = 0.90
+z0.025 = 1.960
+P(p ∈(0.620, 0.680)) = 0.95
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+17 / 20
+
+
+--- SLIDE 18 ---
+Estymacja przedziałowa
+Przykład 5. Przedział ufności dla wskaźnika struktury
+Jaką proporcję czasu dron spędza w trybie autonomicznego przetwa-
+rzania danych przez system AI (np. analizy obrazu)?
+Dron wykonuje pomiar co 10 ms.
+Niech n – całkowita liczba pomiarów w czasie obserwacji, m – liczba
+pomiarów, gdy dron faktycznie przetwarza dane w systemie AI. Jako
+próbę wybieramy losowo 1 minutę (60000ms). Otrzymaliśmy nastę-
+pujące wyniki n = 60000/10 = 6000,
+m = 658. Wyznacz 95%
+przedział ufności dla proporcji czasu, gdy dron przetwarza dane w
+systemie AI.
+ˆp = 0.1097 z0.05/2 = 1.96
+P(p ∈(0.1018, 0.1176)) = 0.95
+Z 95% ufnością pewien dron spędza w trybie autonomicznego przetwa-
+rzania danych przez system AI 10,2-11,8% swojego czasu w systemie
+operacyjnym.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+18 / 20
+
+
+--- SLIDE 19 ---
+Estymacja przedziałowa
+Przykład 6. Przedział ufności dla wskaźnika struktury
+Jak długo powinien trwać eksperyment OS (z układem operacyjnym)
+jeśli chcielibyśmy uzyskać 95% przedział ufności z marginesem błędu
+0,5%, wiedząc że proporcja czasu, który spędza procesor w systemie
+wynosi 0,1097
+P
+
+ˆp −zα/2 ·
+q
+ˆpˆq
+n < p < ˆp + zα/2 ·
+q
+ˆpˆq
+n
+
+= 1 −α,
+P [p ∈(0, 1097 −0.0005; 0, 1097 + 0.0005)] = 95%.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+19 / 20
+
+
+--- SLIDE 20 ---
+Estymacja przedziałowa
+Przykład 6. Przedział ufności dla wskaźnika struktury
+Jak długo powinien trwać eksperyment OS (z układem operacyjnym)
+jeśli chcielibyśmy uzyskać 95% przedział ufności z marginesem błędu
+0,5%, wiedząc że proporcja czasu, który spędza procesor w systemie
+wynosi 0,1097
+ˆp = 0.1097 ˆq = 0.8903 z0.025 = 1.96
+zα/2 ·
+q
+ˆpˆq
+n = 0.0005
+1.96 ·
+q
+0.1097·0.8903
+n
+= 0.005 / : 0.005
+· √n
+1.96
+0.005 ·
+√
+0.1097 · 0.8903 = √n
+n =
+h
+1.96
+0.005
+i2 · 0.1097 · 0.8903 = 1247102
+przerwania są co 10 ms (milisekund), stąd mamy 1247102 · 10 =
+12471020ms, dalej 12471,020s daje w wyniku 3,46 godzin.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+20 / 20
+
+

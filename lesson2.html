@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temat 2: Estymacja Przedziałowa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- MathJax for rendering math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .toggle-example {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .example-box {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Wróć do spisu
+        </a>
+        <nav>
+            <span style="color: var(--text-main); font-weight: 600;">Temat 2 / 4</span>
+        </nav>
+    </header>
+
+    <div class="lesson-header animate-fade-in">
+        <h1 style="color: var(--primary); font-weight: 800;">Estymacja Przedziałowa</h1>
+        <p style="color: var(--text-muted); font-size: 1.25rem; margin-top: 1rem;">Naucz się wnioskować o całej populacji jedynie na podstawie małej próby poprzez użycie przedziałów ufności.</p>
+    </div>
+
+    <main class="lesson-content">
+        <!-- Wstep do Estymacji -->
+        <section class="slide">
+            <h2>Po co nam w ogóle estymacja przedziałowa?</h2>
+            <p>Za pomocą estymatorów punktowych (czyli konkretnej jednej liczby, np. "średni czas to 50s") nie można określić precyzji ani pewności. Nie wiemy, czy naprawdę wszyscy mają 50s, czy to po prostu zbieg okoliczności w naszej małej grupie testowej.</p>
+            <p><strong>Przedział ufności</strong> rozwiązuje ten problem. Zamiast jednej liczby, podajemy "od-do" z pewnym założonym z góry poziomem prawdopodobieństwa, np. ufać w 95%.</p>
+            <p>Koncepcję tę opracował w 1933 roku polski statystyk J. Spława-Neyman.</p>
+            
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Badanie baterii w telefonach</h3>
+                <p>Przypuśćmy, że chcesz oszacować czas pracy na nowej baterii smartfona dla wszystkich użytkowników na świecie (jest ich milion). Nie przebadasz miliona ludzi. Bierzesz próbę 100 osób.</p>
+                <p>Estymacja punktowa: "Bateria trzyma średnio 14 godzin".</p>
+                <p>Estymacja przedziałowa: "Bateria trzyma z <strong>90% ufnością, średnio między 13.5h a 14.5h</strong>". Która opcja daje inżynierom lepszy obraz pewności? Oczywiście przedziałowa!</p>
+            </div>
+        </section>
+
+        <!-- Dlugosc a ufnosc -->
+        <section class="slide">
+            <h2>Precyzja Estymacji vs Ufność</h2>
+            <ul>
+                <li><strong>Długość przedziału:</strong> świadczy o precyzji (im krótszy "od-do", tym węższe widełki, więc precyzja jest większa).</li>
+                <li><strong>Poziom ufności (\(1 - \alpha\)):</strong> oznaczany np. jako 95%, 99%. Mówi nam z jaką "pewnością" wnioskujemy. Poziom ufności 95% oznacza, że gdybyśmy powtarzali wyciąganie prób 100 razy i z powrotem liczyli takie przedziały - 95 z nich by faktycznie "trafiło" w to prawdziwe, nieznane odchylenie populacji.</li>
+            </ul>
+            <p><em>Jest jednak haczyk:</em> Zwiększając pewność (z 90% np. na 99%) musimy ten przedział znacznie rozszerzyć! To logiczne - chcesz być znacznie bardziej pewny? Musisz uwzględniać absurdalnie rzadkie i dalekie skrajności, co automatycznie "rozwala" twój fajny krótki przedział i tak tracisz precyzję.</p>
+            <p>Lekarstwem na zwiększenie i ufności i precyzji JEDNOCZEŚNIE jest... wzięcie znacznie większej próby.</p>
+        </section>
+
+        <!-- Przedział ufności dla średniej -->
+        <section class="slide">
+            <h2>Przedział Ufności dla Średniej \(\mu\), \(\sigma\) nieznana</h2>
+            <p>Jest to najczęsty przypadek w życiu. Znasz średnią (\(\overline{X}\)) i standardowe odchylenie na wybranej próbie (\(s\)), ale dla reszty świata – jest Ci kompletnie nieznana (\(\sigma\)).</p>
+            <div class="formula">
+                \( P \left( \overline{X} - t_{n-1, \alpha/2} \cdot \frac{s}{\sqrt{n}} \leq \mu \leq \overline{X} + t_{n-1, \alpha/2} \cdot \frac{s}{\sqrt{n}} \right) = 1 - \alpha \)
+            </div>
+            <p>Jeśli próba jest duża (\(n \ge 30\)), możemy zamiast uciążliwego t-Studenta \(t_{n-1}\) oprzeć się na rozkładzie normalnym Standaryzowanym z jego słynnym \(z_{\alpha/2}\).</p>
+            <div class="formula">
+                \( P \left( \overline{X} - z_{\alpha/2} \cdot \frac{s}{\sqrt{n}} \leq \mu \leq \overline{X} + z_{\alpha/2} \cdot \frac{s}{\sqrt{n}} \right) = 1 - \alpha \)
+            </div>
+
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Średni wzrost Polaków </h3>
+                <p>Nikt nie zna dokładnie średniego wzrostu całej Polski (\(\mu\)). Łapiemy próbę 20 chłopaków z Poznania. Ich średnia wylosowana to (\(\overline{X} = 180\)) i mają odchylenie \(s=5cm\). Próba to \(n=20\).</p>
+                <p>Aby zrobić 95% przedział, odczytujemy na tablicy krzywą cięcia skrajnych "ogonów", i mamy np wartość \(t \approx 2.093\). Podstawiamy to wszystko i otrzymujemy, że prawdziwy średni wzrost wszystkich chłopaków w Polsce z ufnością 95% mieści się między 177cm a 183cm.</p>
+            </div>
+        </section>
+
+        <!-- Przedział ufności dla wariancji -->
+        <section class="slide">
+            <h2>Przedział wyznaczany z \(\chi^2\) dla Wariancji \(\sigma^2\)</h2>
+            <p>Bazuje on w stu procentach na skomplikowanie brzmiącym rozkładzie <strong>Chi-kwadrat (\(\chi^2\))</strong>.</p>
+            <div class="formula">
+                \( P \left( \frac{(n-1)s^2}{\chi^2_{n-1, \alpha/2}} \leq \sigma^2 \leq \frac{(n-1)s^2}{\chi^2_{n-1, 1-\alpha/2}} \right) = 1 - \alpha \)
+            </div>
+            <p>Jest to niezwykle potężne narzędzie używane do sprawdzania odchylenia błędu i rzetelności na produkcji oraz testowaniu jednolitości maszyn i procesorów w hardware.</p>
+        </section>
+
+        <!-- Przedzial ufności dla wskaźnika struktury -->
+        <section class="slide">
+            <h2>Przedział ufności dla wskaźnika struktury (proporcji, frakcji) \(p\)</h2>
+            <p>Pozwala oszacować ułamek "Części Całości". Przyjmujemy tzw. p-daszek: \(\hat{p}\), która wynosi \(\frac{m}{n}\) gdzie \(m\) to sukcesy wewnątrz naszej zbadanej próbki \(n\).</p>
+            <div class="formula">
+                \( P \left( \hat{p} - z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}\hat{q}}{n}} < p < \hat{p} + z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}\hat{q}}{n}} \right) = 1 - \alpha \)
+            </div>
+            
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Odsiew na egzaminie z algorytmów</h3>
+                <p>Z dziennika wylosowano próbkę 1000 studentów. 650 (reprezentuje \(m\)) z nich otrzymało z Algorytmiki trójkę w 1. terminie.</p>
+                <p>Chcemy z 90% pewnością wiedzieć, ile tak w ogóle wyniesie na uczelni udział studentów z trójkami. Kładymy wzór z rozkładem \(z\), i dowiadujemy się, że udział prawdziwy w każdym czasie znajduje się najpewniej w przedziale: od 62,5% do 67,5% wszystkich roczników.</p>
+            </div>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="lesson1.html" class="btn btn-secondary">&larr; Poprzednia lekcja</a>
+            <a href="lesson3.html" class="btn">Następna lekcja: Testy normalności &rarr;</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Wykonanie: Miłosz Prusinowski &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

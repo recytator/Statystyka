@@ -1,0 +1,770 @@
+--- SLIDE 1 ---
+Testowanie hipotez
+Statystyka
+Wnioskowanie o populacji – testowanie hipotez
+prof. UPP dr hab. Bogna Zawieja
+Katedra Metod Matematycznych i Statystycznych
+Uniwersytet Przyrodniczy w Poznaniu
+17 marca 2026
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+1 / 37
+
+
+--- SLIDE 2 ---
+Testowanie hipotez
+Testowanie hipotez
+Zarówno estymacja punktowa jak i estymacja
+przedziałowa służą do ustalenia wartości nieznanych
+charakterystyk (parametrów) rozkładu.
+Natomiast w celu podjęcia decyzji na rzecz lub przeciw
+wcześniej (przed pobraniem próby) postawionemu
+przypuszczeniu (hipotezie) przeprowadzamy
+wnioskowanie statystyczne.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+2 / 37
+
+
+--- SLIDE 3 ---
+Testowanie hipotez
+Testowanie hipotez
+Wnioskowanie nazywamy
+parametrycznym, gdy dotyczy parametrów rozkładu.
+nieparametrycznym, gdy dotyczy dystrybuanty.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+3 / 37
+
+
+--- SLIDE 4 ---
+Testowanie hipotez
+Testowanie hipotez
+Ponieważ decyzję podejmujemy na podstawie próby
+losowej a nie całej populacji, dlatego mówimy o
+testowaniu hipotez statystycznych.
+Teorię testowania hipotez statystycznych zawdzięczamy
+statystykowi Spława-Neymanowi i Pearsonowi.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+4 / 37
+
+
+--- SLIDE 5 ---
+Testowanie hipotez
+Testowanie hipotez
+Hipoteza statystyczna (parametryczna),
+to przypuszczenie dotyczące parametrów badanej
+populacji. Jej wiarogodność jest badana na podstawie
+informacji zawartej w próbie.
+Wnioskowanie statystyczne polegające na podjęciu decyzji
+na podstawie próby, czy hipotezę należy odrzucić, czy też
+nie nazywamy testowaniem hipotez.
+Hipoteza
+obustronna
+lewostronna
+prawostronna
+H0
+=
+= (­)
+= (¬)
+H1
+̸=
+<
+>
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+5 / 37
+
+
+--- SLIDE 6 ---
+Testowanie hipotez
+Testowanie hipotez
+Statystykę,
+której
+wartości
+pozwalają
+zdecydować
+o odrzuceniu H0 nazywamy statystyką testową.
+Zbiór wartości tej statystyki, przy których H0
+jest
+odrzucana nazywamy obszarem krytycznym (obszarem
+odrzucenia) testu.
+Obszar krytyczny:
+K
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+6 / 37
+
+
+--- SLIDE 7 ---
+Testowanie hipotez
+Testowanie hipotez
+Parę: (statystyka, obszar krytyczny)
+nazywamy testem statystycznym.
+Testy statystyczne służące do weryfikacji hipotez
+parametrycznych nazywamy testami parametrycznymi.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+7 / 37
+
+
+--- SLIDE 8 ---
+Testowanie hipotez
+Testowanie hipotez
+Decyzja podjęta w wyniku testowania hipotezy zerowej
+może nie być trafna.
+Mamy dwie sytuacje niepożądane:
+1) odrzucamy H0 - gdy faktycznie jest ona prawdziwa
+(błąd I rodzaju -błąd odrzucenia),
+2) nie odrzucamy H0 - gdy faktycznie jest ona niepraw-
+dziwa (błąd II rodzaju - błąd przyjęcia).
+Prawdopodobieństwa popełnienia tych błędów podlegają
+kontroli w postępowaniu testowym.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+8 / 37
+
+
+--- SLIDE 9 ---
+Testowanie hipotez
+Testowanie hipotez
+Stan Natury
+Wynik Testu
+H0 prawdziwa
+H0 fałszywa
+Odrzucić H0
+Błąd α
+(I-go rodzaju)
+1-β
+Poprawna
+Nie odrzucić H0
+1-α
+Poprawna
+Błąd β
+(II-go rodzaju)
+Górną granicę prawdopodobieństwa popełnienia błędu I-go rodzaju
+nazywa się poziomem istotności testu (rozmiarem testu)
+i oznaczane jest przez α.
+Prawdopodobieństwo popełnienia błędu II-go rodzaju oznaczane jest
+przez β, a wartość 1 −β nazywa się mocą testu.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+9 / 37
+
+
+--- SLIDE 10 ---
+Testowanie hipotez
+Testowanie hipotez
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+10 / 37
+
+
+--- SLIDE 11 ---
+Testowanie hipotez
+Testowanie hipotez
+Procedury testowe konstruuje się w ten sposób, aby przy
+ustalonej górnej granicy α dla prawdopodobieństwa błędu
+I rodzaju, zapewnić możliwie najmniejsze
+prawdopodobieństwo błędu II rodzaju (tym samym
+największą moc.)
+Statystykę spełniającą powyższe warunki nazywamy
+testem jednostajnie najmocniejszym.
+Uzyskanie testu jednostajnie najmocniejszego możliwe
+jest w klasie testów nieobciążonych (moc dla hipotezy
+alternatywnej nie jest mniejsza niż poziom istotności dla
+hipotezy zerowej).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+11 / 37
+
+
+--- SLIDE 12 ---
+Testowanie hipotez
+Testowanie hipotez
+Za poziom istotności przyjmuje się wartość małą.
+Najczęściej jest to 0,05 lub 0,01.
+W procedurze testowej hipotezy H0 i H1 nie są
+traktowane symetrycznie, nacisk w konstrukcji testu jest
+położony na utrzymanie H0.
+Wynika stąd, że jeśli odrzucamy H0 to mamy pewność,
+że prawdopodobieństwo błędu I rodzaju nie przekroczy α.
+Jeśli natomiast H0 nie odrzucamy to pojawia się
+możliwość popełnienia błędu II rodzaju. Niestety kontrola
+tego błędu nie jest tak oczywista jak kontrola błędu II
+rodzaju.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+12 / 37
+
+
+--- SLIDE 13 ---
+Testowanie hipotez
+Testowanie hipotez
+W związku z powyższym postępowanie testowe kończymy
+stwierdzeniem:
+Hipotezę zerową należy odrzucić (przyjąć hipotezę al-
+ternatywną),
+albo stwierdzenie przeciwnym:
+Zebrane informacje nie dają podstaw do odrzucenia
+hipotezy zerowej.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+13 / 37
+
+
+--- SLIDE 14 ---
+Testowanie hipotez
+Procedura testowa
+1) Sformułowanie hipotezy (zerowej H0 i alternatywnej H1)
+2) Wybór poziomu istotności
+3) Wykonanie doświadczenia (wylosowanie próby)
+4) Wybór statystyki testowej ˆθ
+5) Wyznaczenie obszaru krytycznego K
+6) Podjęcie decyzji:
+– Na poziomie istotności α odrzucamy hipotezę H0 na korzyść
+H1 jeżeli ˆθ ∈K
+– Na poziomie istotności α nie ma podstaw do odrzucenia
+hipotezy H0 jeżeli ˆθ ̸∈K
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+14 / 37
+
+
+--- SLIDE 15 ---
+Testowanie hipotez
+Testy hipotez o średniej µ
+Trzy układy hipotez:
+H0 : µ = µ0
+H0 : µ = µ0
+H0 : µ = µ0
+H1 : µ ̸= µ0
+H1 : µ < µ0
+H1 : µ > µ0
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+15 / 37
+
+
+--- SLIDE 16 ---
+Testowanie hipotez
+Test hipotezy o średniej µ (σ nieznana)
+Założenie:
+populacja normalna N(µ, σ),
+σ nieznana
+Statystyka testowa:
+t0 = x −µ0
+s
+· √n
+∼
+H0
+tn−1
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+16 / 37
+
+
+--- SLIDE 17 ---
+Testowanie hipotez
+Test hipotezy o średniej µ (σ nieznana)
+H0 : µ = µ0
+Hipoteza
+Obszar krytyczny testu t0 na poziomie istotności α
+alternatywna
+H1 : µ ̸= µ0
+K = (−∞; −tn−1,α/2) ∪(tn−1,α/2; ∞)
+|t0| > tn−1,α/2
+H1 : µ < µ0
+K = (−∞; −tn−1,α)
+t0 < −tn−1,α
+H1 : µ > µ0
+K = (tn−1,α; ∞)
+t0 > tn−1,α
+gdzie P(t0 > tn−1,γ) = γ
+t0 ∼tn−1,γ
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+17 / 37
+
+
+--- SLIDE 18 ---
+Testowanie hipotez
+Test hipotezy o średniej µ (σ nieznana)
+Założenie:
+duża próba (n ­ 30)
+Statystyka testowa:
+z0 = x −µ0
+s
+· √n
+∼
+H0
+N(0, 1)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+18 / 37
+
+
+--- SLIDE 19 ---
+Testowanie hipotez
+Test hipotezy o średniej µ (duża próba n ­ 30)
+H0 : µ = µ0
+Hipoteza
+Obszar krytyczny testu z0 na poziomie istotności α
+alternatywna
+H1 : µ ̸= µ0
+K = (−∞; −zα/2) ∪(zα/2; ∞)
+|z0| > zα/2
+H1 : µ < µ0
+K = (−∞; −zα)
+z0 < −zα
+H1 : µ > µ0
+K = (zα; ∞)
+z0 > zα
+gdzie zβ : P(Z > zβ) = β
+Z ∼N(0, 1)
+zβ ∼t∞;β
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+19 / 37
+
+
+--- SLIDE 20 ---
+Testowanie hipotez
+Przykład 1 (Test hipotezy o średniej µ)
+Wylosowano próbkę 5-ciu zdjęć zrobionych przez drona.
+Zakładamy, że zmienna losowa, rozmiar pliku, ma
+rozkład normalny. Średnia próby wynosi 12,3 kbajta.
+Odchylenie standardowe próby wynosi 0,5 kB. Czy
+można uznać za słuszne twierdzenie, że średni rozmiar
+plików wynosi 12.35 kbajtów? Testować na poziomie
+istotności α = 0, 05.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+20 / 37
+
+
+--- SLIDE 21 ---
+Testowanie hipotez
+Przykład 1 (Test hipotezy o średniej µ)
+H1 : µ ̸= µ0
+H0 : µ = µ0
+µ0 = 12, 35kB
+x = 12, 3kB
+s = 0, 5
+t0 = x−µ0
+s
+· √n = 12,3−12,35
+0,5
+·
+√
+5 = −0, 2236
+tα/2,n−1 = t0,025;4 = 2, 776
+K = (−∞; −2, 776) ∪(2, 776; ∞)
+Ponieważ t0 /∈K, to na poziomie istotności α= 0.05 nie ma podstaw
+do odrzucenia hipotezy zerowej. Na podstawie przeprowadzonych ob-
+serwacji nie można odrzucić przypuszczenia, że prawdziwy rozmiar
+zdjęć wynosi 12.35 kB.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+21 / 37
+
+
+--- SLIDE 22 ---
+Testowanie hipotez
+Przykład 2 (Test hipotezy o średniej µ)
+Wylosowano próbę 50 zdjęć. Średni rozmiar zdjęć w
+próbie wynosi 12,3 kbajtów. Odchylenie standardowe
+wynosi 0,5 kB.
+Na poziomie istotności 0.05 zweryfikować hipotezę, że
+przeciętny rozmiar plików wynosi 12,5 kB.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+22 / 37
+
+
+--- SLIDE 23 ---
+Testowanie hipotez
+Przykład 2 (Test hipotezy o średniej µ)
+H1 : µ ̸= µ0
+H0 : µ = µ0
+µ0 = 12, 5kbajtw
+x = 12, 3
+s = 0, 5
+z0 = x−µ0
+s
+· √n = 12,3−12,5
+0,5
+·
+√
+50 = −2, 83
+zα/2 = t0,025;∞= 1, 96
+K = (−∞; −1, 96) ∪(1, 96; ∞)
+Ponieważ z0 ∈K, to na poziomie istotności α= 0.05 hipotezę zerową
+należy odrzucić. Średnica wielokość plików różni się od 12,5 kbajtów.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+23 / 37
+
+
+--- SLIDE 24 ---
+Testowanie hipotez
+Przykład 3 (Test hipotezy o średniej µ)
+Wylosowano próbę 50 zdjęć zrobionych prze drona. Średni rozmiar
+plików wynosi 12,35 kbajtów. Odchylenie standardowe wynosi 0,5
+kbajtów.
+Na poziomie istotności 0.05 zweryfikować hipotezę, że przeciętny
+rozmiar plików jest większy niż 12,3 kbajtów.
+H1 : µ > µ0
+H0 : µ = µ0
+µ0 = 12, 3kB
+x = 12, 35kB
+s = 0, 5
+z0 = x−µ0
+s
+· √n = 12,35−12,3
+0,5
+·
+√
+50 = 0, 707
+zα = t0,05 = 1, 645
+K = (1, 645; ∞)
+Ponieważ z0 /∈K, to na poziomie istotności α= 0.05 nie ma podstaw
+do odrzucenia hipotezy zerowej. Na podstawie przeprowadzonych ob-
+serwacji nie można twierdzić, że prawdziwa wiekość plików jest większa
+niż 12,3 kB.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+24 / 37
+
+
+--- SLIDE 25 ---
+Testowanie hipotez
+Test a przedział ufności
+Założenie: populacja normalna N(µ, σ),
+σ nieznana
+Hipotezy:
+H0 : µ = µ0
+H1 : µ ̸= µ0
+Poziom istotności: α
+Obszar krytyczny K:
+|t0| > tn−1,α/2
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+25 / 37
+
+
+--- SLIDE 26 ---
+Testowanie hipotez
+Test a przedział ufności
+Obszar krytyczny K:
+
+x −µ0
+s/√n
+ > tn−1,α/2
+Zbiór ”akceptacji” H0:
+
+x −µ0
+s/√n
+ ¬ tn−1,α/2
+−tn−1,α/2 ¬ x −µ0
+s/√n ¬ tn−1,α/2
+x −tn−1,α/2 · s/√n ¬ µ0 ¬ x + tn−1,α/2 · s/√n
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+26 / 37
+
+
+--- SLIDE 27 ---
+Testowanie hipotez
+Test a przedział ufności
+Zbiór ”akceptacji” H0:
+x −tn−1,α/2 · s/√n ¬ µ0 ¬ x + tn−1,α/2 · s/√n
+100(1 −α)% przedział ufności dla µ:
+x −tn−1,α/2 · s/√n ¬ µ ¬ x + tn−1,α/2 · s/√n
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+27 / 37
+
+
+--- SLIDE 28 ---
+Testowanie hipotez
+Testy hipotez o wariancji σ2
+Trzy układy hipotez:
+H0 : σ2 = σ2
+0
+H0 : σ2 = σ2
+0
+H0 : σ2 = σ2
+0
+H1 : σ2 ̸= σ2
+0
+H1 : σ2 < σ2
+0
+H1 : σ2 > σ2
+0
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+28 / 37
+
+
+--- SLIDE 29 ---
+Testowanie hipotez
+Test hipotezy o wariancji σ2
+Założenie:
+populacja normalna N(µ, σ)
+Statystyka testowa:
+χ2
+0 = (n −1)s2
+σ2
+0
+∼
+H0
+χ2
+n−1
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+29 / 37
+
+
+--- SLIDE 30 ---
+Testowanie hipotez
+Test hipotezy o wariancji σ2
+H0 : σ2 = σ2
+0
+Hipoteza
+Obszar krytyczny testu χ2
+0 na poziomie istotności α
+alternatywna
+H1 : σ2 ̸= σ2
+0
+K = (0; χ2
+n−1,1−α/2)∪
+(χ2
+n−1,α/2; ∞)
+χ2
+0 < χ2
+n−1,1−α/2
+lub
+χ2
+0 > χ2
+n−1,α/2
+H1 : σ2 < σ2
+0
+K = (0; χ2
+n−1,1−α)
+χ2
+0 < χ2
+n−1,1−α
+H1 : σ2 > σ2
+0
+K = (χ2
+n−1,α; ∞)
+χ2
+0 > χ2
+n−1,α
+gdzie χ2
+n−1,γ : P(χ2 > χ2
+n−1,γ) = γ; χ2 ∼χ2
+n−1
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+30 / 37
+
+
+--- SLIDE 31 ---
+Testowanie hipotez
+Przykład 4 (Test hipotezy o wariancji σ2)
+Na podstawie danych z zad 1 zweryfikować hipotezę, że rze-
+czywista wariancja rozmiaru plików jest większa od 0.21[kB2]
+Przyjąć α = 0.05.
+H1 : σ2 > σ2
+0
+H0 : σ2 = σ2
+0
+σ2
+0 = 2
+χ2
+0 = (n −1)s2
+σ2
+0
+∼
+H0
+χ2
+n−1
+χ2
+0 = 4 · 0.25
+0.21
+= 4.741
+χ2
+α;n−1 = χ2
+0,05;4 = 9.488
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+31 / 37
+
+
+--- SLIDE 32 ---
+Testowanie hipotez
+Przykład 4 (Test hipotezy o wariancji σ2)
+Na podstawie danych z zad. 1 zweryfikować hipotezę, że rze-
+czywista wariancja rozmiaru plików jest większa od 2[kB]2.
+Przyjąć α = 0.05.
+K = (χ2
+n−1,α; ∞)
+K = (9.488; ∞)
+χ2
+0 = 4.741 /∈K
+odp. Nie ma podstaw do odrzucenia hipotezy zerowej na po-
+ziomie istotności α = 0,05. Nie można twierdzić, że rze-
+czywista wariancja rozmiaru plików jest większa niż 0.21[kB]2
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+32 / 37
+
+
+--- SLIDE 33 ---
+Testowanie hipotez
+Testy hipotez o wskaźniku struktury p
+Próba duża (n ­ 100):
+m - liczba sukcesów,
+ˆp = m
+n , ˆq = 1 −ˆp
+Trzy układy hipotez:
+H0 : p = p0
+H0 : p = p0
+H0 : p = p0
+H1 : p ̸= p0
+H1 : p < p0
+H1 : p > p0
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+33 / 37
+
+
+--- SLIDE 34 ---
+Testowanie hipotez
+Test hipotezy o wskaźniku struktury p
+Próba duża (n ­ 100):
+m - liczba sukcesów,
+ˆp = m/n
+Statystyka testowa:
+z0 =
+ˆp −p0
+q
+p0(1 −p0)/√n
+∼
+H0
+N(0, 1)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+34 / 37
+
+
+--- SLIDE 35 ---
+Testowanie hipotez
+Test hipotezy o wskaźniku struktury p
+H0 : p = p0
+Hipoteza
+Obszar krytyczny testu z0 na poziomie istotności α
+alternatywna
+H1 : p ̸= p0
+K = (−∞; −zα/2)∪
+(zα/2; ∞)
+|z0| > zα/2
+H1 : p < p0
+K = (−∞; −zα)
+z0 < −zα
+H1 : p > p0
+K = (zα; ∞)
+z0 > zα
+gdzie zγ : P(Z > zγ) = γ; Z ∼N(0, 1).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+35 / 37
+
+
+--- SLIDE 36 ---
+Testowanie hipotez
+Przykład 5 (Test hipotezy o wskaźniku
+struktury p)
+Firma zatrudniająca około 2000 pracowników ma zamiar
+wybudować parking, ponieważ przypuszcza się, że ponad
+60% pracowników przyjeżdża do pracy samochodem. Spraw-
+dzić prawdziwość przypuszczenia, jeśli ankieta wykazała,
+że spośród 250 losowo wybranych osób 169 przyjeżdża
+do pracy swoim samochodem. Przyjąć α = 0.01
+H1 : p > p0
+H0 : p = p0
+p0 = 0, 60
+ˆp = 169/250 = 0, 676
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+36 / 37
+
+
+--- SLIDE 37 ---
+Testowanie hipotez
+Przykład 5 (Test hipotezy o wskaźniku
+struktury p)
+z0 =
+ˆp −p0
+q
+p0(1 −p0)/√n
+∼
+H0
+N(0, 1)
+z0 =
+0, 676 −0, 60
+q
+0, 60(1 −0, 60)/
+√
+250 = 2, 45
+zα = tα;∞= 2, 326
+K = (2, 326; ∞)
+Ponieważ z0 ∈K hipotezę zerową należy odrzucić na po-
+ziomie istotności α = 0.01. Przypuszczenie, że ponad
+60% pracowników przyjeżdża do pracy samochodem moż-
+na uznać za prawdziwe.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+37 / 37
+
+

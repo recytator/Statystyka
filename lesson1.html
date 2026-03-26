@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temat 1: Zmienne Losowe i Prawdopodobieństwo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- MathJax for rendering math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .toggle-example {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .example-box {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Wróć do spisu
+        </a>
+        <nav>
+            <span style="color: var(--text-main); font-weight: 600;">Temat 1 / 4</span>
+        </nav>
+    </header>
+
+    <div class="lesson-header animate-fade-in">
+        <h1 style="color: var(--primary); font-weight: 800;">Zmienne Losowe i Prawdopodobieństwo</h1>
+        <p style="color: var(--text-muted); font-size: 1.25rem; margin-top: 1rem;">Odkryj podstawy eksperymentów statystycznych, zmiennych skokowych i ciągłych oraz ich charakterystyk.</p>
+    </div>
+
+    <main class="lesson-content">
+        <!-- Zdarzenia Elementarne i Eksperyment -->
+        <section class="slide">
+            <h2>Eksperyment i Zdarzenia Elementarne</h2>
+            <p>W nauce, w celu oceny zjawiska wykonuje się kontrolowane <strong>doświadczenie losowe</strong> (eksperyment). Wynik takiego doświadczenia nazywamy <strong>zdarzeniem elementarnym (ω)</strong>.</p>
+            <p>Eksperyment można powtarzać nieskończenie wiele razy, ale w przypadku braku determinizmu, nigdy nie jesteśmy w 100% pewni, co się wydarzy.</p>
+            <p><strong>Zdarzenia niezależne:</strong> wystąpienie jednego zdarzenia nie wpływa w żaden sposób na prawdopodobieństwo wystąpienia drugiego.</p>
+            
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Z życia wzięte - Sztuczna Inteligencja i Drony</h3>
+                <p>Wyobraź sobie, że tworzysz system AI do omijania przeszkód dla drona. Puszczenie drona w lot to nasz "eksperyment". </p>
+                <p>Pojedynczy wynik, np. "Dron wykrył przeszkodę na 5 metrach" lub "Dron uderzył w drzewo", to <strong>zdarzenie elementarne</strong>. Wszystkie możliwe scenariusze tego lotu to Twoja <strong>przestrzeń zdarzeń elementarnych (Ω)</strong>.</p>
+                <p>Zdarzenia niezależne to np. "Dron wykrył przeszkodę" i "W serwerowni w Krakowie spadł zasilacz" - jedno nie ma żadnego wpływu na drugie!</p>
+            </div>
+        </section>
+
+        <!-- Zmienna Losowa -->
+        <section class="slide">
+            <h2>Zmienna Losowa (X)</h2>
+            <p>To nic innego jak funkcja, która konkretnemu zdarzeniu w świecie przypisuje liczbę. Przekształcamy to, co się stało (zdarzenie), w to, co możemy mierzyć (matematykę).</p>
+            <div class="formula">
+                \( X = X(\omega), \quad \omega \in \Omega, \quad X \in \mathbb{R} \)
+            </div>
+            <p>Zawsze oznaczamy je dużymi literami: \(X, Y, Z\), natomiast wartości, które przyjmują, oznaczamy małymi: \(x, y, z\).</p>
+            
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Przykład informatyczny</h3>
+                <p>Testujesz oprogramowanie. "Uruchomienie skryptu" to zdarzenie. Nasza <strong>zmienna losowa X</strong> może oznaczać: "Liczba błędów wykrytych przez kompilator". Inna zmienna <strong>Y</strong> może oznaczać: "Czas wykonania programu w sekundach". Przekształciliśmy więc konkretne zdarzenie software'owe na suchą liczbę, o której możemy uczyć się statystycznie.</p>
+            </div>
+        </section>
+
+        <!-- Zmierne Losowe Skokowe i Ciałe -->
+        <section class="slide">
+            <h2>Zmienna Dyskretna (Skokowa) i Ciągła</h2>
+            <ul>
+                <li><strong>Zmienna dyskretna (skokowa):</strong> przyjmuje konkretne, oddzielne wartości (zazwyczaj całkowite). Możemy je po prostu "policzyć" na palcach (nawet jeśli ich liczba jest nieskończona, da się je kolejno ponumerować).</li>
+                <li><strong>Zmienna ciągła:</strong> może przyjąć DOWOLNĄ wartość z pewnego przedziału liczbowego. Najczęściej ma nieskończenie wiele ułamków po przecinku (zależy od precyzji pomiaru).</li>
+            </ul>
+            
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Drony wchodzą do gry!</h3>
+                <p><strong>Dyskretna:</strong> Liczba dronów, które dzisiaj pomyślnie wróciły do bazy (np. 0, 1, 2, 3... - nikt nie widział 1.5 drona).</p>
+                <p><strong>Ciągła:</strong> Dokładna wysokość lotu drona w metrach (np. 120.453... metra) lub dokładny czas transferu zdjęć na serwer (np. 2.3045... sekundy).</p>
+            </div>
+        </section>
+
+        <!-- Prawdopodobienstwo i Dystrybuanta -->
+        <section class="slide">
+            <h2>Dystrybuanta (F(x))</h2>
+            <p><strong>Dystrybuanta</strong> zmiennej losowej \(X\) mówi nam o tym, jakie jest prawdopodobieństwo tego, że nasza zmienna losowa nie przekroczy określonej wartości \(x\).</p>
+            <div class="formula">
+                \( F(x) = P(X \leq x) \)
+            </div>
+            <p><strong>Ważne własności:</strong></p>
+            <ul>
+                <li>Zawsze przyjmuje wartości od 0 do 1: \( 0 \leq F(x) \leq 1 \)</li>
+                <li>Jest funkcją niemalejącą. (Z każdym krokiem prawdodobieństwo "skumulowane" może tylko rosnąć)</li>
+                <li>Dystrybuanta pozwala obliczyć prawdopodobieństwo bycia w przedziale: \( P(a < X \leq b) = F(b) - F(a) \)</li>
+            </ul>
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Zbieranie punktów do zaliczenia</h3>
+                <p>Wyobraź sobie pudełko, do którego wpadasz jak do lejka i "zbierasz" prawdopodobieństwo idąc od lewej strony osi liczbowej. Dystrybuanta dla wartości 50 punktów to po prostu szansa na to, by osoba z grupy zdobyła <strong>do 50 punktów włącznie</strong>.</p>
+                <p>Dlatego jeśli chcesz policzyć szansę na zdobycie punktów pomiędzy 50 a 80, po prostu bierzesz dystrybuantę (szansę zdobycia max. 80 pkt) i odejmujesz od niej szansę na zdobycie max. 50 pkt.</p>
+            </div>
+        </section>
+
+        <!-- Charakterystyki - Wartosc oczekiwana -->
+        <section class="slide">
+            <h2>Charakterystyki Rozkładu: Wartość Oczekiwana (E(X))</h2>
+            <p>Wartość oczekiwana, oznaczana \(E(X)\) lub \(\mu\) (mi), to teoretyczna "średnia", w kierunku której zmierzają wyniki w nieskończenie dużej liczbie eksperymentów. Oznacza co się stanie "przeciętnie".</p>
+            <div class="formula">
+                \( E(X) = \sum x_i \cdot p_i \) (dla zmiennej dyskretnej)
+            </div>
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Hazard w Las Vegas</h3>
+                <p>Grasz w mroczną grę na automacie, która w 90% kosztuje Cię 10 zł ($x=-10, p=0.9$), a w 10% daje wygraną 50 zł ($x=50, p=0.1$).</p>
+                <p>Twoja wartość oczekiwana to: \( (-10 \cdot 0.9) + (50 \cdot 0.1) = -9 + 5 = -4 \).</p>
+                <p>Wynik oznacza, że "średnio" w każdej rozegranej grze, kasyno zyskuje od Ciebie 4 złote. Na nic zdadzą się jednorazowe zwycięstwa po 50 zł, bo na długą metę system działa przeciw tobie.</p>
+            </div>
+        </section>
+
+        <!-- Wariancja -->
+        <section class="slide">
+            <h2>Charakterystyki Rozkładu: Wariancja i Odchylenie Standardowe</h2>
+            <p><strong>Wariancja</strong>, oznaczana jako \(D^2(X)\), \(\sigma^2\) (sigma kwadrat) bądź \(Var(X)\), to miara rozproszenia. Mówi o tym, jak bardzo wyniki odchylają się od wyliczonej średniej (wartości oczekiwanej).</p>
+            <div class="formula">
+                \( D^2(X) = E(X^2) - (E(X))^2 \)
+            </div>
+            <p>Z uwagi na to, że wariancja jest "kwadratowa" na tle naszych danych, wyciągamy z niej pierwiastek i zyskujemy <strong>Odchylenie Standardowe</strong> \(\sigma\) (sigma). Jego wielkość jest już mierzona w tej samej jednostce co początkowa zmienna.</p>
+            <div class="formula">
+                \( \sigma = \sqrt{D^2(X)} \)
+            </div>
+            
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Rzetelność maszyn paczkujących</h3>
+                <p>Wyobraźmy sobie dwie maszyny napełniające butelki o rzekomej objętości 500ml.</p>
+                <p>Maszyna A nalewa często: 490ml, 510ml, 495ml. Osiąga średnią 500ml, ale ma duże "skoki" – a zatem ma <strong>wysoką wariancję</strong>.</p>
+                <p>Maszyna B nalewa często: 499ml, 501ml, 500ml. Osiąga również średnią 500ml, ale ma bardzo <strong>niską wariancję (a więc i odchylenie standardowe)</strong>. Jest bardziej precyzyjna i przewidywalna.</p>
+            </div>
+        </section>
+        
+        <!-- Cechy -->
+        <section class="slide">
+            <h2>Rodzaje badanych Cech (Zmiennych)</h2>
+            <ul>
+                <li><strong>Cechy mierzalne (ilościowe)</strong>: Można je wyrazić jednostką miary (np. metry, sekundy, liczba sztuk).
+                    <ul>
+                        <li>Skokowe: liczba wykrytych wirusów (0, 1, 2...)</li>
+                        <li>Ciągłe: czas transferu danych (14.2 ms)</li>
+                    </ul>
+                </li>
+                <li><strong>Cechy niemierzalne (jakościowe)</strong>: Określają jakość/etykietę.
+                    <ul>
+                        <li>Nominalne: brak hierarchii (np. Typ wykrytego obiektu przez AI: "kot", "pies", "samochód")</li>
+                        <li>Porządkowe: zachowana jest hierarchia i stopień (np. Ocena ryzyka: "niskie", "średnie", "wysokie")</li>
+                        <li>Dychotomiczne (Binarne): tylko dwa stany (0/1, Prawda/Fałsz, Sukces/Porazka)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="index.html" class="btn btn-secondary">Wróć do bazy wiedzy</a>
+            <a href="lesson2.html" class="btn">Następna lekcja: Estymacja przedziałowa &rarr;</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Wykonanie: Miłosz Prusinowski &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

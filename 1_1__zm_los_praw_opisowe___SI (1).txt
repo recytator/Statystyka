@@ -1,0 +1,553 @@
+--- SLIDE 1 ---
+Eksperyment, statystyki opisowe
+Statystyka
+Eksperyment, zdarzenia elementarne zmienne losowe,
+prawdopodobieństwo
+Prof. UPP dr hab. Bogna Zawieja
+Katedra Metod Matematycznych i Statystycznych
+Uniwersytet Przyrodniczy w Poznaniu
+17 marca 2026
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+1 / 31
+
+
+--- SLIDE 2 ---
+Eksperyment
+Eksperyment
+W nauce, w celu oceny, opisu lub klasyfikacji pewnego zjawiska wy-
+konuje się
+kontrolowane doświadczenie losowe, zwane dalej
+eksperymentem, lub
+pomiary obiektów wylosowanych ze zbiorowości występujących
+w ”naturze”.
+W doświadczeniach związanych z informatyką ”naturalne zjawiska”
+będą rozumiane jako cała zbiorowość pewnych zdarzeń sprzętu itp.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+2 / 31
+
+
+--- SLIDE 3 ---
+Eksperyment
+Zdarzenie elementarne
+Wynik doświadczenia losowego nazywamy zdarzeniem ele-
+mentarnym ω (doświadczenie takie można powtarzać dowolnie wie-
+le razy, w warunkach praktycznie identycznych, ale jego wynik nie daje
+sie¸ przewidzieć jednoznacznie).
+Zdarzenia niezależne: Dwa zdarzenia nazywane są niezależnymi, jeśli
+wystąpienie jednego zdarzenia w żaden sposób nie wpływa na praw-
+dopodobieństwo drugiego zdarzenia.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+3 / 31
+
+
+--- SLIDE 4 ---
+Eksperyment
+Zdarzenie elementarne - przykłady
+Sztuczna inteligencja
+Model klasyfikacyjny przypisuje obraz do klasy „kot”.
+Algorytm rozpoznawania mowy poprawnie rozpoznaje jedno
+konkretne słowo.
+Sieć neuronowa przewiduje wartość (np. temperaturę) równą
+25°C dla danego wejścia.
+Systemy bezzałogowe (np. drony)
+Dron wykonuje pojedynczy pomiar wysokości równy 120
+mukcesem lub niepowodzeniem - np. błędne hasło).
+Czujnik wykrywa przeszkodę w określonej odległości (np. 5 m).
+Dron podejmuje jedną decyzję: „skręć w lewo”.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+4 / 31
+
+
+--- SLIDE 5 ---
+Eksperyment
+Zdarzenie elementarne - przykłady
+Przykłady łączące AI i systemy bezzałogowe
+Dron z AI rozpoznaje na obrazie dokładnie jedną osobę.
+System autonomiczny wybiera jedną konkretną trasę lotu.
+Model AI klasyfikuje teren jako „bezpieczny do lądowania”.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+5 / 31
+
+
+--- SLIDE 6 ---
+Eksperyment
+Zdarzenie elementarne - przykłady
+Uczenie maszynowe i sztuczna inteligencja
+Model poprawnie sklasyfikował obraz jako „kot”.
+Model błędnie sklasyfikował wiadomość jako spam.
+Proces uczenia sieci neuronowej zakończył się sukcesem.
+Algorytm regresji liniowej przewidział wartość z błędem
+większym niż ε.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+6 / 31
+
+
+--- SLIDE 7 ---
+Eksperyment
+Przestrzeń zdarzeń elementarnych
+Przestrzeń zdarzeń elementarnych, Ωto zbiór wszystkich
+możliwych wyników doświadczenia losowego.
+Przykłady
+Wszystkie możliwe wyniki klasyfikacji obrazu przez model -
+(np. model ma rozpoznać następujące zwierzęta: pies, kot,
+koń, krowa).
+Wszystkie możliwe wyniki testu jednostkowego
+oprogramowania (sukces, niepowodzenie).
+Wszystkie możliwe decyzje zmiany kierunku drona.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+7 / 31
+
+
+--- SLIDE 8 ---
+Eksperyment
+Zmienna losowa
+Definicja.
+Zmienna losowa, jest to funkcja przypisuja¸ca zdarzeniom
+elementarnym liczby (X = X(ω), ω ∈Ω, X ∈R).
+Zmienne losowe oznaczamy dużymi literami: X, Y, Z,
+wartości tych zmiennych małymi literami: x, y, z.
+Przykady
+X – liczba testów jednostkowych zakończonych sukcesem.
+Y – czas wykonania programu (w sekundach).
+Z – liczba błędów wykrytych w danym teście.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+8 / 31
+
+
+--- SLIDE 9 ---
+Eksperyment
+Zmienna losowa
+Zmienna¸ losowa¸ nazywamy dyskretna¸ (skokowa¸), gdy
+przyjmuje co najwyżej przeliczalnie wiele wartości.
+Przykałd: Liczba wykrytych obiektów przez model AI na obrazie.
+Zmienna¸ losowa¸ nazywamy cia¸gła¸, gdy przyjmuje dowolne
+wartości z ustalonego przedziału liczbowego.
+Przykałd:Wysokość lotu drona (w metrach).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+9 / 31
+
+
+--- SLIDE 10 ---
+Eksperyment
+Prawdopodobieństwo
+Definicja.
+Funkcje¸ P, która każdemu zdarzeniu ω ⊂Ωprzypisuje dokładnie
+jedna¸ liczbe¸ P(ω) spełniaja¸ca¸ naste¸puja¸ce warunki:
+1) 0 ¬ P(ω) ¬ 1,
+2) P(Ω) = 1,
+3) jeśli zdarzenia ω1 i ω2 wykluczaja¸ sie¸, to
+P(ω1 ∪ω2) = P(ω1) + P(ω2),
+nazywamy prawdopodobieństwem.
+Liczbe¸ p = P(ω) nazywamy prawdopodobieństwem
+zdarzenia ω.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+10 / 31
+
+
+--- SLIDE 11 ---
+Rozłkad prawdopodobieństwa
+Rozkład zmiennej losowej
+Rozkład prawdopodobieństwa przedstawia podział
+prawdopodobieństwa pewnego: P(Ω) = 1,
+odnosza¸cego sie¸ do całej przestrzeni zdarzeń
+elementarnych,
+na prawdopodobieństwa poszczególnych zdarzeń
+elementarnych ωi: P(ωi) = pi.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+11 / 31
+
+
+--- SLIDE 12 ---
+Rozłkad prawdopodobieństwa
+Rozkład prawdopodobieństwa
+Rozkładem prawdopodobieństwa dyskretnej zmiennej losowej X,
+nazywamy funkcje¸ przyporza¸dkowuja¸ca¸ wartościom zmiennej xi
+(i = 1, 2, . . .) prawdopodobieństwa ich przyje¸cia:
+P(X = xi) = pi.
+Zmienna losowa cia¸gła przyjmuje dowolne wartości (nieskończenie
+wiele) z pewnego przedziału liczbowego (a, b).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+12 / 31
+
+
+--- SLIDE 13 ---
+Rozłkad prawdopodobieństwa
+Rozkład prawdopodobieństwa
+Przypuśćmy, że przyje¸cie przez zmienna¸ losowa¸ każdej wartości
+z przedziału (a, b) jest jednakowo prawdopodbne.
+Niech n be¸dzie liczba¸ tych wartości, wtedy dla każdego i = 1, .., n
+P(xi) = 1
+n, gdzie n jest liczba¸ wszystkich możliwych wartości
+zmiennej losowej.
+Ponieważ wszystkich wartości xi ∈(a, b) jest niekończenie wiele,
+to n →∞.
+Z teorii granic wiemy, że
+lim
+n→∞
+1
+n = 0
+sta¸d P(xi) = 0.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+13 / 31
+
+
+--- SLIDE 14 ---
+Rozłkad prawdopodobieństwa
+Funkcja g¸estości
+Rozkład prawdopodobieństwa zmiennej losowej cia¸głej
+opisujemy funkcja¸ ge¸stości f(x).
+Własności funkcji ge¸stości prawdopodobieństwa:
+f(x) ­ 0; f : R −→R+ ∪{0},
+P(a < X < b) = P(a ¬ X < b) = P(a < X ¬ b) =
+P(a¬ X ¬ b) =
+R b
+a f(x)dx
+Z ∞
+−∞f(x)dx = 1
+P(X > b) = 1 −P(X ¬ b)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+14 / 31
+
+
+--- SLIDE 15 ---
+Rozłkad prawdopodobieństwa
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+15 / 31
+
+
+--- SLIDE 16 ---
+Rozłkad prawdopodobieństwa
+Dystrybuanta
+Dystrybuanta¸ zmiennej losowej X
+nazywamy funkcje¸ F(X) określona¸ na zbiorze liczb
+rzeczywistych i przyjmuja¸ca¸ wartości
+F(x) = P(X ¬ x) = P({ω : X(ω) ¬ x})
+F(x) =
+
+
+
+
+
+
+
+P
+xi¬x p(xi) =
+P
+xi¬x pi dla X dyskretnych
+R x
+−∞f(t)dt
+dla X ci¸agłych
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+16 / 31
+
+
+--- SLIDE 17 ---
+Rozłkad prawdopodobieństwa
+Dystrybuanta
+Własności:
+0 ¬ F(x) ¬ 1
+F(x) jest niemaleja¸ca
+F(x) jest prawostronnie cia¸gła:
+lim
+x→x+
+0
+F(x) = F(x0)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+17 / 31
+
+
+--- SLIDE 18 ---
+Rozłkad prawdopodobieństwa
+Dystrybuanta i prawdopodobieństwo
+Dla dowolnych liczb rzeczywistych a i b zachodzi:
+P(X ¬ a) = F(a)
+P(X > a) = 1 −F(a)
+P(a < X ¬ b) = F(b) −F(a)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+18 / 31
+
+
+--- SLIDE 19 ---
+Rozłkad prawdopodobieństwa
+Dystrybuanta i prawdopodobieństwo -
+przykład
+Zmienna losowa skokowa:
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+19 / 31
+
+
+--- SLIDE 20 ---
+Rozłkad prawdopodobieństwa
+Dystrybuanta i prawdopodobieństwo -
+przykład
+Zmienna losowa ciągła:
+https://statystyka.online/dystrybuanta-teoria/]
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+20 / 31
+
+
+--- SLIDE 21 ---
+Charakterystyki rozkładu
+Charakterystyki rozkładu prawdopodobieństwa
+Niech zmienna losowa dyskretna X przyjmuje wartości
+x1, x2, . . . , xn odpowiednio z prawdopodobieństwami
+p1, p2, . . . , pn.
+Wartości¸a oczekiwan¸a dyskretnej zmiennej losowej X
+nazywamy liczbe¸ oznaczona¸ symbolem E(X) i określona¸
+wzorem
+E(X) =
+n
+X
+i=1
+xipi
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+21 / 31
+
+
+--- SLIDE 22 ---
+Charakterystyki rozkładu
+Charakterystyki rozkładu prawdopodobieństwa
+Definicja
+Wartości¸a oczekiwan¸a ci¸agłej zmiennej losowej X
+nazywamy
+E(X) =
+Z ∞
+−∞x · f(x)dx
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+22 / 31
+
+
+--- SLIDE 23 ---
+Charakterystyki rozkładu
+Własności E(X)
+Niech a, b ∈R.
+E(a) = a ;
+E(bX) = b · E(X)
+E(X + a) = E(X) + a
+Niech g : D →R, gdzie xi ∈D, i = 1, 2, . . .. Wówczas
+E[g(X)] =
+∞
+X
+i=1
+g(xi) · pi
+Dla wartości oczekiwanej stosujemy również oznaczenie:
+E[X] = µ
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+23 / 31
+
+
+--- SLIDE 24 ---
+Charakterystyki rozkładu
+Charakterystyki rozkładu prawdopodobieństwa
+Wariancj¸a zmiennej losowej X nazywamy liczbe¸ oznaczona¸
+symbolem D2(X) (lub V ar(X)) i określona¸ wzorem
+D2(X) = E[(X −E(X))2]
+=E(X2) −E(X)2
+lub
+D2(X) = E[(X −µ)2] = E(X2) −µ2.
+Stosujemy również oznaczenie:
+D2[X] = σ2
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+24 / 31
+
+
+--- SLIDE 25 ---
+Charakterystyki rozkładu
+Wariancja
+Niech zmienna losowa dyskretna X przyjmuje wartości x1, x2, . . . , xn
+odpowiednio z prawdopodobieństwami p1, p2, . . . , pn.
+Wówczas:
+E(X) =
+n
+X
+i=1
+xipi oraz E(X2) =
+n
+X
+i=1
+x2
+i pi
+Wariancja dyskretnej zmiennej losowej
+D2(X) = E(X2) −E(X)2 =
+n
+X
+i=1
+x2
+ipi −
+
+
+n
+X
+i=1
+xipi
+
+
+2
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+25 / 31
+
+
+--- SLIDE 26 ---
+Charakterystyki rozkładu
+Wariancja
+Niech cia¸gła zmienna losowa X przyjmuje wartości z przedziału
+(a, b). Wtedy
+E(X) =
+Z ∞
+−∞x · f(x)dx oraz E(X2) =
+Z ∞
+−∞x2 · f(x)dx
+Wariancja ci¸agłej zmiennej losowej X:
+D2(X) = E(X2) −E(X)2 =
+Z ∞
+−∞x2 · f(x)dx −
+Z ∞
+−∞x · f(x)dx
+2
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+26 / 31
+
+
+--- SLIDE 27 ---
+Charakterystyki rozkładu
+Własności D2(X)
+Niech a, b ∈R.
+D2(X) ­ 0
+(ZAWSZE!)
+D2(X + a) = D2(X)
+D2(bX) = b2 · D2(X)
+D2(a + bX) = b2 · D2(X)
+Definicja
+Odchyleniem standardowym zmiennej losowej X
+nazywamy liczbe¸ oznaczona¸ symbolem D(X) i określona¸
+wzorem
+D(X) =
+q
+D2(X) = σ.
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+27 / 31
+
+
+--- SLIDE 28 ---
+Charakterystyki rozkładu
+Zmienne losowe - Cechy
+Mierzalne - ilościowe
+dające się określić odpowiednią jednostką miary (np. liczba
+wystąpień zdarzenia, przedział czasu, rozmiar itd.)
+skokowe (np. liczba dronów, które poprawnie wykonały
+zadanie).
+ciągłe (np. czas przesyłu danych, czas reakcji systemu, czas
+wykonania).
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+28 / 31
+
+
+--- SLIDE 29 ---
+Charakterystyki rozkładu
+Zmienne losowe - Cechy
+Niemierzalne - jakościowe
+określające pewną jakość jednostki statystycznej, a nie jej
+wymiar ilościowy.
+nominalne (np. Typ wykrytego obiektu przez AI;
+Wartości: „człowiek”, „samochód”, „drzewo”,
+„budynek” ...)
+porządkowe (np. Poziom ryzyka lądowania oceniany
+przez system AI; Wartości: „niski”, „średni”,
+„wysoki”)
+dychotomiczne (tak/nie, 0/1) - mogą być zarówno
+porządkowe jak i nominalne (np. Czy dron wykrył
+przeszkodę: Tak, Nie)
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+29 / 31
+
+
+--- SLIDE 30 ---
+Charakterystyki rozkładu
+Cechy - miary
+Przykłady cech - pomiary bezpośrednie
+Pomiar czasu przelotu drona
+Czas wykonania zadania przez AI
+Liczba wykrytych obiektów
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+30 / 31
+
+
+--- SLIDE 31 ---
+Charakterystyki rozkładu
+Cechy
+Powyższe cechy są pomiarami bezpośrednimi. W eksperymentach ana-
+lizuje się także pomiary pośrednie (wyprowadzane z tch bezpośred-
+nich za pomocą odpowiednich wzorów)
+Przykłady
+Wyznaczanie prędkości drona Mierzymy:
+przebytą drogę (np. z GPS)
+czas lotu
+Następnie obliczamy:
+v = s
+t
+Bogna Zawieja (Poznań, Polska)
+Statystyka
+17 marca 2026
+31 / 31
+
+

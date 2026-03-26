@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temat 4: Testowanie Hipotez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- MathJax for rendering math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .toggle-example {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .example-box {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Wróć do spisu
+        </a>
+        <nav>
+            <span style="color: var(--text-main); font-weight: 600;">Temat 4 / 4</span>
+        </nav>
+    </header>
+
+    <div class="lesson-header animate-fade-in">
+        <h1 style="color: var(--primary); font-weight: 800;">Testowanie Hipotez</h1>
+        <p style="color: var(--text-muted); font-size: 1.25rem; margin-top: 1rem;">Naucz się podejmować rzetelne, naukowe decyzje na podstawie dostępnych danych. Sprawdzaj czy przypuszczenia mają realne oparcie w liczbach.</p>
+    </div>
+
+    <main class="lesson-content">
+        <!-- Procedura bazy -->
+        <section class="slide">
+            <h2>Wprowadzenie do Wnioskowania</span></h2>
+            <p><strong>Hipoteza statystyczna</strong> to nasze pewne przypuszczenie na temat świata, dotyczące parametru populacji. Oceniamy jej wiarygodność na podstawie małego wycinka wiedzy - próbie z testów.</p>
+            <p>Formułujemy dwie konkurencyjne ze sobą wersje rzeczywistości:</p>
+            <ul>
+                <li><strong>Hipoteza 0 (\(H_0\)):</strong> Hipoteza Zerowa. Przeważnie stawia tezę, że znak to równość (np. \( \mu = \mu_0 \)). Często to nasza "dotychczasowa, nudna wiedza", którą my próbujemy obalić. W testach statystycznych, my kładziemy olbrzymi nacisk konstrukcyjny właśnie <strong>na utrzymanie \(H_0\)</strong> – odrzucamy ją dopier wtedy, gdy dowody "krzyczą z pewnością".</li>
+                <li><strong>Hipoteza A / Alternatywna (\(H_1\)):</strong> To coś co podejrzewamy i podskórnie badamy (np. lek działa lepiej, program działa szybciej \(\mu < \mu_0\), zysk przekroczył margines), chcemy ją udowodnić. Stąd jej znaki to \(\neq, <, >\).</li>
+            </ul>
+        </section>
+
+        <!-- Błędy w statystyce -->
+        <section class="slide">
+            <h2>Pomyłki Natury - Błąd I i II rodzaju</h2>
+            <p>Nie jesteśmy bogami – nasza decyzja z pobranych fragmentów o świecie może okazać się zwyczajnie, po ludzku zła, gdy przyrównamy ją do Stanu Natury.</p>
+            <ul>
+                <li><strong>Błąd I rodzaju (Błąd odrzucenia) - Prawdopodobieństwo \(\alpha\)</strong>: Pomyłka oznaczająca odrzucenie i wyrzucenie do śmieci \(H_0\) mimo, że na świecie naprawdę, cichaczem byłą ona PRAWDZIWA. Prawdopodobieństwo ustrzeżenia się od tego błędu leży w samym wybranym przez nas poziomie istotności testu (często to \(0.05\) więc pomyłka to max 5%).</li>
+                <li><strong>Błąd II rodzaju (Błąd przyjęcia) - Prawdopodobieństwo \(\beta\)</strong>: Zbytnie "zaufanie i wyrozumiałość" dla teorii zero – zatrzymanie i nie udowodnienie \(H_0\) jako klamstęstwa (mimo ze \(H_0\) naprawdę była rzekomą bzdurą ukrywając fałsz ze świata). Moc ratująca ten stan to Moc Testu \(1 - \beta\).</li>
+            </ul>
+
+            <button class="btn btn-secondary toggle-example">Pokaż prosty przykład</button>
+            <div class="example-box">
+                <h3>💡 Sąd Ostateczny</h3>
+                <p>\(H_0\): Podejrzany w sądzie jest w 100% niewinny.</p>
+                <p>Nasz oskarżyciel chce udowodnić zbrodnię na 99% pewności.</p>
+                <p><strong>Zrobienie błędu I-go rodzaju</strong>: Sąd uznaje chłopa za winnego i karze mu siedzieć, mimo że oskarżony napadzie w tle nie brał udziału (najgorszy w sądzie wariant, i my maksymalnie zaniżamy prawdopodobieństwo ze skażemy niewinnego jako próg \(\alpha=0.01\)).</p>
+                <p><strong>Zrobienie błędu II-go rodzaju (\(\beta\))</strong>: Mamy w aktach mało solidnych mętnych świadków więc sąd mówi "Brak mocnych podstaw do odrzucenia - na dziś wypuszczamy" (pomimo, że zbir w rzeczywistości zabił poszkodowaną i wychodzi). </p>
+            </div>
+        </section>
+
+        <!-- Procedura -->
+        <section class="slide">
+            <h2>Logika Krok po Kroku</h2>
+            <ol>
+                <li>Formułujemy na kartce \(H_0\), a następnie pod nią wpisujemy \(H_1\) (jednostronną albo dwustronną) - i wybieramy poziom morderczej istotności dla błędów (\(\alpha\) = 5%).</li>
+                <li>Wyliczamy Statystykę Testową. Dla odchyleń to \(\chi^2\). A ogólnie dla średnich, gdy próba mała lub bez znajomości Sigmy populacji (\(\sigma\)) to <strong>Rozkłady t-Studenta \(t_0 = \frac{\overline{X} - \mu_0}{s} \cdot \sqrt{n}\)</strong> lub dla dużych prób (nad 30) <strong>Standaryzowane Normalne (\(z_0\))</strong>.</li>
+                <li>Dalej: Kreślimy Obszar Krytyczny \(K\). Obszar ten uosabia ogony gęstości - tam decydujemy czy teść jest prawdziwy.</li>
+                <li>Finał i Decyzja Wnioskowa. "Jeśli nasze uzyskane w pomiaru empirycznym \(z_0\) wpada do wnętrza narysowanego zakreślenia obszaru (\(K\)) - to znaczy, że hipoteza była nie do utrzymania. Odrzucam \(H_0\) jako rzadko spotykany cud i przyjmuję nową prawdę!".</li>
+                <li>Jeśli się \(z_0 \notin K\), piszemy wyrok: Z zebranych informacji (może za małej, marnej próby itp) na poziomie błędu do 5% na dziś NIE MAMY PODSTAW do odrzucenia \(H_0\).</li>
+            </ol>
+        </section>
+        
+        <!-- Szybki test m -->
+        <section class="slide">
+            <h2>Przykład z IT i Wyrokiem Hipotezy</h2>
+            <p>Przypuśćmy: W starej dokumentacji serwera pisze, że wysyła pakiety do chmury średnio w czasie \(\mu_0=12.5\mu s\). Sprawdzasz sam – pobrałeś ping serwera ok.~\(n=50\) razy na wirtualnym hoście. Wyszła tam lekko szybsza paczka uśrednień \(\overline{X} = 12.3 \mu s\) bez zmian w gęstości odchyłu (\(s=0.5\)). Masz twarde dowody żeby twierdzić, że dokumentacja oficjalnie okłamuje świat?</p>
+            <br>
+            <p>1. \(\alpha=0.05\). </p>
+            <p>2. \(H_0: \mu = 12.5\), \(H_1: \mu \neq 12.5 \). (szukam niezgodności, "czy sie różni")</p>
+            <p>3. Próba 50 szt to tzw. duża próba wiec uzywamy testu rozkladu Z (czyli N(0,1)). Liczymy \(z_0 = \frac{12.3-12.5}{0.5} \cdot \sqrt{50} = -2.83\).</p>
+            <p>4. Tablice rozkładu normalnych dają margines \(z_{\alpha/2} = 1.96\). Z góry \(K = (-\infty ; -1.96> \cup <1.96 ; \infty)\).</p>
+            <p>5. O kurczę! \(z_0\) jest na totalnym zewnątrz w strefie K (\(z_0 = -2.83 \in K\)) zatem hipotezę zerową obalono i odrzucono. Prawdziwa paczka na 95% drastycznie kłóci się z papierowym \(\mu=12.5\).</p>
+        </section>
+
+        <!-- Relacja z Przedzialami -->
+        <section class="slide">
+            <h2>Korelacja z Przedziałem Ufności (Secret Trick)</h2>
+            <p>Istnieje niezwykła zależność. Zbiór, w którym akceptujesz i zatrzymujesz hipotezę zerową z pomiarami (to czego nie zakreślił ołówek z zewnątrz obszaru Krytycznego K) ... Odpowiada matematycznie i fizycznie wzorowi na <strong>Przedział Ufności ze 100(1-\(\alpha\))%! </strong>. Te działy są swoją wielką podkategorią.</p>
+        </section>
+
+        <div class="lesson-nav">
+            <a href="lesson3.html" class="btn btn-secondary">&larr; Poprzednia lekcja</a>
+            <a href="index.html" class="btn">Wróć na Stronę Główną</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Wykonanie: Miłosz Prusinowski &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
